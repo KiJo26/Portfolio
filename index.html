@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/ring.css">
+    <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>    
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+    <style>
+      #loading {
+        opacity: 1;
+        transition: opacity 1s ease-out;
+      }
+      #loading.hidden {
+        opacity: 0;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="ring" id="loading">
+        Loading
+        <lord-icon
+            src="https://cdn.lordicon.com/jryilvyz.json"
+            trigger="loop"
+            colors="primary:#000000,secondary:#ffbe00"
+            stroke="50"
+            style="width:50px;height:190px; position: absolute; bottom: 3rem; right: 75px;">
+        </lord-icon>
+        <span></span>
+    </div>
+
+    <script>
+        // Wait for the page to finish loading
+        window.onload = function() {
+          // Select the loading element
+          const loading = document.getElementById('loading');
+          
+          // Set a timeout function to hide the loading element and redirect to the new page after 5 seconds
+          setTimeout(function() {
+            loading.classList.add('hidden');
+            setTimeout(function() {
+              window.location.href = './html/my-portfolio.html';
+            }, 1000);
+          }, 800);
+        }
+    </script>
+  
+</body>
+</html>
